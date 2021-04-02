@@ -1,0 +1,8 @@
+h1{color:blue;}
+body{background-color:yellow;}
+p{color:red;
+  font-family:fantasy;
+  font-size:30px;
+  text-transform:UPPERCASE;
+  text-align:center;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;}
