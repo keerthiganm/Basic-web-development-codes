@@ -1,0 +1,47 @@
+<html>
+<head><title>Create your account</title></head>
+ <h1><b>Create your account</b></h1>
+ <style>
+  button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  }</style>
+<script type="text/javascript">
+ function validate()
+  {
+    document.write("<p>Bad username and bad password</p>");
+  }
+ function showPosition(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(position){
+                var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+                document.getElementById("result").innerHTML = positionInfo;
+            });
+        } else{
+            alert("Sorry, your browser does not support HTML5 geolocation.");
+        }
+    }
+  </script>
+  
+  <body>
+    <form>
+    <p>username
+      <input type="textfield" name="username" placeholder="username">
+    </p>
+    <p>password
+      <input type="textfield" name="password" placeholder="password">
+    </p>
+       <input type="button" color="blue" value="validate" onclick="validate()";> 
+     <div id="result">
+        <!--Position information will be inserted here-->
+    </div>
+    <button type="button" align="center" onclick="showPosition();">Show Position</button>
+
+   </form>
+   </body>
+  </html>
